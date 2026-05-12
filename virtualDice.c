@@ -29,7 +29,12 @@ int main(){
 		faces=getValidFaces();
 		numDice=numberDice();
         // Stores how many times each face appears
-		int frequency[faces]={0};
+		int frequency[faces];
+
+        // Initialize frequency array to 0
+        for(int i = 0; i < faces; i++) {
+            frequency[i] = 0;
+        }
 		
 		for (int i=0; i<numDice; i++) {
 			result=rollDice(faces);
